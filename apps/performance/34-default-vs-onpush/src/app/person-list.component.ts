@@ -40,9 +40,7 @@ import { SearchComponent } from './search.component';
       <div *ngIf="names?.length === 0" class="empty-list-label">Empty list</div>
 
       @for (name of names; track name) {
-        <mat-list-item cd-flash class="text-orange-500">
-          <app-person [name]="name" />
-        </mat-list-item>
+        <app-person [name]="name" />
         <mat-divider *ngIf="names?.length !== 0"></mat-divider>
       }
     </mat-list>
